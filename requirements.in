@@ -1,0 +1,10 @@
+# pip-compile --output-file=app/requirements.txt requirements.in
+# --resolver backtracking
+redis
+psycopg[binary]
+fastapi
+requests
+uvicorn
+pyblake2
+ecdsa
+base58

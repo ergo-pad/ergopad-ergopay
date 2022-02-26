@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            body, td, input, div { font-family: Arial !important; }
+        </style>
+        <script type="text/javascript" src="qr/qrcode.js"></script>
+        <script>
+            var sessionId = '123abc-xyz-pdq-000000'
+            async function test() {
+                // using https://davidshimjs.github.io/qrcodejs/
+                url = 'ergopay://10.0.0.134:7000/'+sessionId+'/#P2PK_ADDRESS#'
+                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                    text: url,
+                    width: 200,
+                    height: 200,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td width=370 align="middle"><h1>ErgoPay</h1></td>
+            </tr>
+        </table>
+
+        <table border="1" cellpadding="0" cellspacing="1"><tr><td>
+        <table>
+            <tr>
+                <td width=120 align="right">Amount:</td>
+                <td width=250><input name=amount type=text></td>
+            </tr>
+            <tr>
+                <td align="right">Wallet:</td>
+                <td><input disabled name=wallet type=text></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name=ergopay type=button onclick="test();" value="Pay"></td>
+            </tr>
+        </table>
+        </td></tr></table><br>
+        &nbsp;<br>
+
+        <table>
+            <tr>
+                <td width=370 align="middle">http://10.0.0.134:7000/123abc-xyz-pdq-000000</td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <td width=370 align="middle"><div id="qrcode"></div></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
