@@ -30,7 +30,7 @@ DEBUG = True # CFG.debug
 st = time() # stopwatch
 
 headers = {
-    "api_key": '49eCcDzqLzL5Gams', # CFG.ergopadApiKey,
+    "api_key": CFG.ergopadApiKey,
     "Content-Type": "application/json"
 }
 
