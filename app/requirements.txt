@@ -22,12 +22,16 @@ ecdsa==0.17.0
     # via -r requirements.in
 fastapi==0.74.1
     # via -r requirements.in
+greenlet==1.1.2
+    # via sqlalchemy
 h11==0.13.0
     # via uvicorn
 idna==3.3
     # via
     #   anyio
     #   requests
+jpype1==1.3.0
+    # via -r requirements.in
 packaging==21.3
     # via redis
 psycopg[binary]==3.0.9
@@ -37,7 +41,9 @@ psycopg-binary==3.0.9
 pyblake2==1.1.2
     # via -r requirements.in
 pydantic==1.9.0
-    # via fastapi
+    # via
+    #   fastapi
+    #   sqlmodel
 pyparsing==3.0.7
     # via packaging
 redis==4.1.4
@@ -48,10 +54,18 @@ six==1.16.0
     # via ecdsa
 sniffio==1.2.0
     # via anyio
+sqlalchemy==1.4.32
+    # via sqlmodel
+sqlalchemy2-stubs==0.0.2a20
+    # via sqlmodel
+sqlmodel==0.0.6
+    # via -r requirements.in
 starlette==0.17.1
     # via fastapi
 typing-extensions==4.1.1
-    # via pydantic
+    # via
+    #   pydantic
+    #   sqlalchemy2-stubs
 urllib3==1.26.8
     # via requests
 uvicorn==0.17.5

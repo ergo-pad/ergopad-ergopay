@@ -3,8 +3,10 @@
 redis
 psycopg[binary]
 fastapi
+sqlmodel
 requests
 uvicorn
 pyblake2
 ecdsa
 base58
+jpype1

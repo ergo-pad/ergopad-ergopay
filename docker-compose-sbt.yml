@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  ergopay-sbt:
+    container_name: ergopay-sbt
+    # env_file: ${ENV_FILE}
+    image: hseeberger/scala-sbt:8u312_1.6.2_3.1.1
+    volumes: 
+      - ./app:/app
+    working_dir: /app
+    command: tail /dev/null -f

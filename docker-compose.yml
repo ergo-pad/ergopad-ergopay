@@ -22,6 +22,7 @@ services:
         options:
             max-file: 5
             max-size: 10m
+    working_dir: /app
     command: tail /dev/null -f
     # command: uvicorn main:app --reload --workers 4 --reload-dir /app --host 0.0.0.0 --port ${API_PORT}
     networks:
